@@ -4,6 +4,7 @@ import (
 	"errors"
 	"fmt"
 	"math"
+	"strings"
 )
 
 // Our basic Sudoku puzzle construction, went for an OO approach
@@ -30,15 +31,36 @@ func (sp *SudokuPuzzle) Solve() error {
 }
 
 // Prints out the Sudoku board
-func (sp *SudokuPuzzle) PrintBoard() {
+func (sp *SudokuPuzzle) DrawAsciiBoard() string {
+
+	boardPrintout := ""
+	line := ""
 
 	for i := 0; i < 9; i++ {
-		fmt.Printf("\n")
-		for j := 0; j < 9; j++ {
-			fmt.Printf(" %d ", sp.Board[i][j])
+		if i != 0 && i%3 == 0 {
+			line += fmt.Sprintf("-+-")
 		}
+		line += strings.Repeat("-", 3)
 	}
-	fmt.Printf("\n")
+	fmt.Sprintf(line, "\n")
+
+	for i := 0; i < 9; i++ {
+
+		if i != 0 && i%3 == 0 {
+			boardPrintout += fmt.Sprintf(line)
+			boardPrintout += fmt.Sprintf("\n")
+		}
+
+		for j := 0; j < 9; j++ {
+			if j != 0 && j%3 == 0 {
+				boardPrintout += fmt.Sprintf(" | ")
+			}
+			boardPrintout += fmt.Sprintf(" %d ", sp.Board[i][j])
+		}
+		boardPrintout += fmt.Sprintf("\n")
+	}
+
+	return boardPrintout
 }
 
 // Creates a start point, will be a 3D array where the third dimension holds

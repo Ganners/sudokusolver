@@ -1,6 +1,9 @@
 package main
 
-import "sudoku_solver/sudoku_solver"
+import (
+	"fmt"
+	"sudoku_solver/sudoku_solver"
+)
 
 // Quick manual test
 func main() {
@@ -18,5 +21,7 @@ func main() {
 
 	sp := sudoku_solver.SudokuPuzzle{Board: board}
 	sp.Solve()
-	sp.PrintBoard()
+
+	fmt.Println("\nThe solution to this board is:\n")
+	fmt.Println(sp.DrawAsciiBoard())
 }
