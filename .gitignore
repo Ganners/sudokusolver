@@ -5,6 +5,3 @@
 # OS ignores
 Thumbs.DB
 .DS_Store
-
-# Compile ignores
-sudoku-solver
