@@ -10,6 +10,7 @@ func main() {
 
 	// This is apparantly the hardest Sudoku puzzle there is?
 	// Easy!
+	// LOL :D
 	board := [][]int{
 		{8, 0, 0, 0, 0, 0, 0, 0, 0},
 		{0, 0, 3, 6, 0, 0, 0, 0, 0},
