@@ -341,8 +341,6 @@ func (sp *SudokuPuzzle) getSquare(x int, y int) (int, int) {
 	return int(math.Floor(float64(x / 3))), int(math.Floor(float64(y / 3)))
 }
 
-//---------------------------------------------------------------------------//
-
 // A helpful function which will remove an integer from a slice by recreating
 // the slice. This means we always have the 0 key for convenience.
 func deleteIntFromSlice(slice []int, elim int) []int {

@@ -2,7 +2,8 @@ package main
 
 import (
 	"fmt"
-	"sudoku_solver/sudoku_solver"
+
+	"github.com/Ganners/sudokusolver/sudoku_solver"
 )
 
 // Quick manual test
@@ -24,6 +25,6 @@ func main() {
 	sp := sudoku_solver.SudokuPuzzle{Board: board}
 	sp.Solve()
 
-	fmt.Println("\nThe solution to this board is:\n")
+	fmt.Println("\nA possible solution to this board is:\n")
 	fmt.Println(sp.DrawAsciiBoard())
 }
