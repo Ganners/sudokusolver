@@ -4,5 +4,9 @@ Sudoku Solver in Go (Golang)
 A package which will solve Sudoku puzzles pretty quickly. Uses a depth first
 approach.
 
-It is currently using a basic recursive approach, I plan on modifying it to
-spawn new searches through passing boards down a channel.
+TODO:
+-----
+
+ + Make use concurrency through channels as opposed to recursion
+ + Write some useful tests and benchmarks (e.g. test boards with only one
+   possible solution)
